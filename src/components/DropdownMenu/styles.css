@@ -1,0 +1,19 @@
+.dropdown{
+    position: absolute;
+    top: 58px;
+    width: 150px;
+    transform: translateX(45%);
+    background-color: #41b9a5;
+    border: 1px solid #E6EAEA;
+    border-radius: 5px;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.dropdown-menu-item{
+    padding: 5px 7px;
+}
+
+.dropdown-menu-item:hover{
+    background-color: #60dbc7;
+}

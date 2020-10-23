@@ -1,0 +1,26 @@
+.solve_btn_container{
+    width: 200px;
+    height: 100%;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    order: 2;
+}
+
+.solve_btn{
+    padding: 8px 25px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #E6EAEA;
+    color: #41b9a5;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
+
+.solve_btn:hover{
+    filter: brightness(1.5);
+}

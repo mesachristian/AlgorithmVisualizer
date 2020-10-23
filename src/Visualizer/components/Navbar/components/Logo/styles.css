@@ -1,0 +1,25 @@
+.nav-brand{
+    height: 100%;
+    margin-left: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    float: left;
+    text-decoration: none;
+}
+
+.nav-title-container{
+    height: 70%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-right: 1px solid #E6EAEA;
+} 
+
+
+.nav-title{
+    margin: auto;
+    padding: 0 30px 0 10px;
+    font-size: 25px;
+}

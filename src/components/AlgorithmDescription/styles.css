@@ -1,0 +1,38 @@
+.algorithm-description{
+    margin-top: 160px;
+    padding-bottom: 20px;
+    width: 100%;
+    display: block;
+    background-color: #78a198;
+}
+
+.algorithm-description-title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.algorithm-description-description{
+    width: 100%;
+    color: #ffffff;
+}
+
+.algorithm-description-description p{
+    font-size: 16px;
+    margin: 20px 30px;
+    text-align: justify;
+}
+
+.algorithm-description-gif{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.algorithm-description-gif:hover{
+    cursor: pointer;
+}

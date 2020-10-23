@@ -1,0 +1,25 @@
+.array-display{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.array-container{
+    width: 50%;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    background-color: #e6dfdf;
+    margin: 50px 0px;
+}
+
+.array-element{
+
+    background-color: #41b9a5;
+    display: inline-block;
+    border: 1px #000000 solid;
+    margin-right: -1px; 
+}
+

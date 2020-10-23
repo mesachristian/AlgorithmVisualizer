@@ -1,0 +1,32 @@
+.property{
+    height: 100%;
+    margin-left: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #E6EAEA;
+}
+
+.property-title{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 2px;
+}
+
+.property-dropdown{
+    height: 100%;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.property-dropdown:hover{
+    background-color: #60dbc7;
+}
+
+.dropdown-item{
+    padding: 0 10px;
+} 

@@ -1,0 +1,19 @@
+.map-container{
+    margin-bottom: 50px;
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td{
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    border: 1px solid #9b9494;
+}
