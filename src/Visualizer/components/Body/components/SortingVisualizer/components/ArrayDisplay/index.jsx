@@ -18,9 +18,9 @@ class ArrayDisplay extends Component{
         return(
             <div className="array-display">
                 <div id="array-container" className="array-container">
-                    {array.map( (element) => {
+                    {array.map( (element, elementIdx) => {
                         return(
-                            <div style={element.style} className="array-element"></div>
+                            <div key={elementIdx} style={element.style} className="array-element"></div>
                         );
                     })}
                 </div>

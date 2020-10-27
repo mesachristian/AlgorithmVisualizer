@@ -8,9 +8,9 @@ export default class DropdownMenu extends Component{
 
         return(
             <div className="dropdown">
-                {algorithms.map( (algorithm) => {
+                {algorithms.map( (algorithm, algorithmIdx) => {
                     return(
-                        <DropdownItem elementClicked={(element) => {this.props.elementClicked(element)}} >{algorithm}</DropdownItem>
+                        <DropdownItem key={algorithmIdx} elementClicked={(element) => {this.props.elementClicked(element)}} >{algorithm}</DropdownItem>
                     );
                 })}
             </div>

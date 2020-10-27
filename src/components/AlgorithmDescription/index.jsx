@@ -21,7 +21,7 @@ class AlgorithmDescription extends Component{
                 </div>
 
                 <div className="algorithm-description-gif">
-                    <img src={logo} onClick={()=> window.open(logo_src, "_blank")}/>
+                    <img alt='' src={logo} onClick={()=> window.open(logo_src, "_blank")}/>
                 </div>
             </div>
         );

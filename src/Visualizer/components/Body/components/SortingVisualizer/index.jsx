@@ -69,10 +69,6 @@ class SortingVisualizer extends Component{
         this.setState({ solution : solution, solutionIndex : 0, showSolution : true, });
     }
 
-    selectAlgorithm(){
-
-    }
-
     componentDidUpdate(){
         
         if(this.state.showSolution){
@@ -86,11 +82,17 @@ class SortingVisualizer extends Component{
 
                 let tempArray = [];
                 
-
                 for(let i=0; i < array.length; i++){
-                    if(i === solution[solutionIndex]){
-                        tempArray[i] = {...tempArray[i - 1]}; 
-                        tempArray[i - 1] = array[i];
+                    let step = solution[solutionIndex];
+                    
+                    if(!step){
+                        tempArray = array;
+                        break;
+                    }
+
+                    if(i === step.from){
+                        tempArray[step.from] = {...tempArray[step.to]}; 
+                        tempArray[step.to] = array[i];
                     }else{
                         tempArray[i] = array[i];
                     }

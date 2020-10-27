@@ -11,7 +11,7 @@ export function bubble_sort(array){
                 let temp = newArray[i -1];
                 newArray[i -1] = newArray[i];
                 newArray[i] = temp;
-                steps.push(i);
+                steps.push({from : i, to : i-1});
                 swapped = true;
             }
         }

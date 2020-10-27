@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 class NavItem extends Component{
   render(){
     
-    const { index, isSelected, onClick, iconName, url } = this.props;
+    const { index, isSelected, onClick, url } = this.props;
     const style = isSelected ? "active" : "nav-item";
 
     return(
