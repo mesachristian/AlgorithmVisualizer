@@ -12,10 +12,10 @@ import ArrayDisplay from './components/ArrayDisplay';
 import {getAlgorithmsDescriptions} from './Algorithms/descriptions';
 import {bubble_sort} from './Algorithms/bubble_sort';
 import {merge_sort} from './Algorithms/merge_sort';
+import {heap_sort} from './Algorithms/heap_sort';
 
 const ALGORITHMS = ['Bubble Sort', 'Merge Sort', 'Heap Sort', 'Quick Sort'];
 const ALGORITHMS_IMPLEMENTATIONS = buildImplementations();
-
 const ALGORTIHMS_DESCRIPTIONS = getAlgorithmsDescriptions();
 
 const MIN_ARRAY_SIZE = 7;
@@ -91,10 +91,10 @@ class SortingVisualizer extends Component{
                     }
 
                     if(i === step.from){
-                        tempArray[step.from] = {...tempArray[step.to]}; 
-                        tempArray[step.to] = array[i];
+                        tempArray[step.from] = {...array[step.to]}; 
+                        tempArray[step.to] = {...array[i]};
                     }else{
-                        tempArray[i] = array[i];
+                        tempArray[i] = {...array[i]};
                     }
                 }
                 this.setState({ array : tempArray, solutionIndex : solutionIndex + 1 });
@@ -183,8 +183,8 @@ function buildImplementations(){
     let implementations = new Map();
     implementations.set(ALGORITHMS[0], bubble_sort);
     implementations.set(ALGORITHMS[1], merge_sort);
-    implementations.set(ALGORITHMS[2], () => {return []});
-    implementations.set(ALGORITHMS[3], bubble_sort);
+    implementations.set(ALGORITHMS[2], heap_sort);
+    implementations.set(ALGORITHMS[3], () => {return []});
     return implementations;
 }
 
