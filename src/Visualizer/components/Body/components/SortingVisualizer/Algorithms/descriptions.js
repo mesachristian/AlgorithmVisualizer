@@ -1,6 +1,7 @@
 import Bubble_sort from './resources/Bubble_sort.gif';
 import Merge_sort from './resources/Merge_sort.gif';
 import heapsort from './resources/heapsort.gif';
+import Quicksort from './resources/Quicksort.gif';
 
 const ALGORITHMS = ['Bubble Sort', 'Merge Sort', 'Heap Sort', 'Quick Sort'];
 var algorithms = new Map();
@@ -40,15 +41,14 @@ algorithms.set( ALGORITHMS[2], {
 
 algorithms.set( ALGORITHMS[3], {
     title : ALGORITHMS[3],
-    description : 'sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly '+ 
-    'steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass '+
-    'through the list is repeated until the list is sorted. The algorithm, which is a comparison sort, is named '+
-    'for the way smaller or larger elements "bubble" to the top of the list.\n'+
-    'This simple algorithm performs poorly in real world use and is used primarily as an educational tool. '+
-    'More efficient algorithms such as quicksort, timsort, or merge sort are used by the sorting libraries '+
-    'built into popular programming languages such as Python and Java.',
-    logo : Bubble_sort,
-    logo_src : 'https://en.wikipedia.org/wiki/Bubble_sort'
+    description : 'Quicksort es un algoritmo al igual que mergesort de la familia de divide and conquer. Este algoritmo fue inventado en 1959 '+
+    'por Tony Hoare. Es un algoritmo que implementado de una manera correcta puede ser 3 veces más rapido que mergesort y heapsort.\n'+
+    'La implementación de este algoritmo consiste en escoger un pivot (en el caso de la implementación de abajo es el elemento en la última '+
+    'posición de la sublista) y lo que se busca es poner este elemento en la posición correcta dejando todos los elementos menores a la izquierda '+
+    'y los elementos mayores a la derecha. Esto se implementa recursivamente haciendo un quicksort para la sublista a la izquierda del pivot y para '+
+    'la sublista a la derecha del pivot.',
+    logo : Quicksort,
+    logo_src : 'https://en.wikipedia.org/wiki/Quicksort'
 });
 
 

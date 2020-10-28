@@ -13,6 +13,7 @@ import {getAlgorithmsDescriptions} from './Algorithms/descriptions';
 import {bubble_sort} from './Algorithms/bubble_sort';
 import {merge_sort} from './Algorithms/merge_sort';
 import {heap_sort} from './Algorithms/heap_sort';
+import {quicksort} from './Algorithms/quicksort';
 
 const ALGORITHMS = ['Bubble Sort', 'Merge Sort', 'Heap Sort', 'Quick Sort'];
 const ALGORITHMS_IMPLEMENTATIONS = buildImplementations();
@@ -184,7 +185,7 @@ function buildImplementations(){
     implementations.set(ALGORITHMS[0], bubble_sort);
     implementations.set(ALGORITHMS[1], merge_sort);
     implementations.set(ALGORITHMS[2], heap_sort);
-    implementations.set(ALGORITHMS[3], () => {return []});
+    implementations.set(ALGORITHMS[3], quicksort);
     return implementations;
 }
 
