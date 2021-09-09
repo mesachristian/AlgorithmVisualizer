@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './styles.css';
 
 // COMPONENTS
-import Map from './components/Map';
+import Maze from './components/Maze';
 
 import Property from 'components/Property';
 import DropdownMenu from 'components/DropdownMenu';
@@ -11,7 +11,8 @@ import AlgorithmDescription from 'components/AlgorithmDescription';
 
 // ALGORITHMS
 import {dijkstra} from './Algorithms/dijkstra';
-import {getAlgorithmsDescriptions} from './Algorithms/descriptions';
+import {a_star} from './Algorithms/a_star';
+import {getAlgorithmsDescriptions} from './Algorithms/descriptions.jsx';
 
 const MAP_ROWS = 15;
 const MAP_COLS = 50;
@@ -30,6 +31,9 @@ const ALGORITHMS = [
     'Convergent Swarm',
     'Greedy Best-first Search'
 ];
+
+const ALGORTIHMS_DESCRIPTIONS = getAlgorithmsDescriptions();
+const ALGORITHMS_IMPLEMENTATIONS = buildImplementations();
 
 const MAZES = [
     'None' ,
@@ -54,8 +58,6 @@ const initialState = {
     algorithmMenuOpened : false,
     mazeMenuOpened : false
 };
-
-const ALGORTIHMS_DESCRIPTIONS = getAlgorithmsDescriptions();
 
 class PathVisualizer extends Component{
 
@@ -185,6 +187,7 @@ class PathVisualizer extends Component{
         let startNode = null;
         let endNode = null;
         
+        // Get start and end nodes
         for(const row of nodes){
             for(const node of row){
                 if(node.isStart){
@@ -196,8 +199,12 @@ class PathVisualizer extends Component{
             }
         }
 
-        const {visitedNodes, shortestPath} = dijkstra(nodes, startNode, endNode);
+        const {visitedNodes, shortestPath} = ALGORITHMS_IMPLEMENTATIONS.get(this.state.actualAlgorithm)(nodes, startNode, endNode);
 
+        this.animateSolution(visitedNodes, shortestPath);
+    }
+
+    animateSolution(visitedNodes, shortestPath){
         for(let i=0; i < visitedNodes.length; i++){
 
             if (i === visitedNodes.length - 1) {
@@ -297,7 +304,7 @@ class PathVisualizer extends Component{
 
                 <AlgorithmDescription algorithms={ALGORTIHMS_DESCRIPTIONS} currentAlgorithm={actualAlgorithm}/>
                 
-                <Map 
+                <Maze 
                     nodes = {nodes}
                     onMouseDownListener = {(row,col) => this.onMouseDownListener(row,col)}
                     onMouseEnterListener = {(row,col) => this.onMouseEnterListener(row,col)}
@@ -330,6 +337,21 @@ function createNode(row, col) {
       isStart: isStart,
       isEnd : isEnd
     };
+}
+
+function buildImplementations(){
+    let implementations = new Map();
+    
+    implementations.set(ALGORITHMS[0], dijkstra);
+    implementations.set(ALGORITHMS[1], a_star);
+    implementations.set(ALGORITHMS[2], () => {});
+    implementations.set(ALGORITHMS[3], () => {});
+    implementations.set(ALGORITHMS[4], () => {});
+    implementations.set(ALGORITHMS[5], () => {});
+    implementations.set(ALGORITHMS[6], () => {});
+    implementations.set(ALGORITHMS[7], () => {});
+
+    return implementations;
 }
 
 export default PathVisualizer;

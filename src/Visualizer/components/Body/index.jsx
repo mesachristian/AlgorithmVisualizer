@@ -7,6 +7,7 @@ import './styles.css';
 // COMPONENTS
 import PathVisualizer from './components/PathVisualizer';
 import SortingVisualizer from './components/SortingVisualizer';
+import Home from './components/Home';
 
 class Body extends Component{
 
@@ -29,10 +30,6 @@ class Body extends Component{
             </div>
         );
     }
-}
-
-function Home(){
-    return <h1>Home</h1>;
 }
 
 export default Body;

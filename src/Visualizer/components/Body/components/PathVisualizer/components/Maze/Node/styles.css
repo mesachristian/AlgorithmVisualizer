@@ -1,22 +1,22 @@
 .node{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-color: white;
-    background-repeat: no-repeat;
-    background-position: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .node-wall{
-    background-color: #1a195c;
+  background-color: #1a195c;
 }
 
 .node-start{
-    background-image: url('./resources/triangletwo-right.svg');
+  background-image: url('./resources/triangletwo-right.svg');
 }
 
 .node-end {
-    background-image: url(./resources/arrive-point.svg);
+  background-image: url(./resources/arrive-point.svg);
 }
 
 .node-visited {

@@ -7,7 +7,7 @@ class AlgorithmDescription extends Component{
 
         const {currentAlgorithm, algorithms} = this.props;
 
-        const {title, description, logo, logo_src} = algorithms.get(currentAlgorithm);
+        const {title, description, logo, pseudocode, logo_src} = algorithms.get(currentAlgorithm);
                 
         return(
             <div className="algorithm-description">
@@ -17,15 +17,39 @@ class AlgorithmDescription extends Component{
                 </div>
 
                 <div className="algorithm-description-description">
-                    <p>{description}</p>
+                    {description}
                 </div>
 
+                <SubTitle>Animation</SubTitle>
+
                 <div className="algorithm-description-gif">
-                    <img alt='' src={logo} onClick={()=> window.open(logo_src, "_blank")}/>
+                    <img alt='' width="500" src={logo} onClick={()=> window.open(logo_src, "_blank")}/>
                 </div>
+
+                <SubTitle>Pseudocode</SubTitle>
+
+                <div className="pseudocode-container">
+                    <div className="pseudocode">
+                    <dl>
+                        bubble_sort(arr, size):
+                        <dd>for i=0 to n-i-1</dd>
+                        <dd><dd>for j=0 to n-i-2</dd></dd>
+                        <dd><dd><dd>if arr[j]{'\t>'}arr[j+1]</dd></dd></dd>
+					    <dd><dd><dd><dd>Swap arr[j] and arr[j+1]</dd></dd></dd></dd>
+                    </dl>
+                    </div>
+                </div>
+
+                <SubTitle>Visualización</SubTitle>
+
+                <div className="algorithm-description-gif"></div>{/*Removes white space*/}
             </div>
         );
     }
+}
+
+function SubTitle(props){
+    return <h2 className="description-title">{props.children} :</h2>; 
 }
 
 export default AlgorithmDescription;

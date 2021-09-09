@@ -20,7 +20,7 @@ const ALGORITHMS_IMPLEMENTATIONS = buildImplementations();
 const ALGORTIHMS_DESCRIPTIONS = getAlgorithmsDescriptions();
 
 const MIN_ARRAY_SIZE = 7;
-const MAX_ARRAY_SIZE = 70;
+const MAX_ARRAY_SIZE = 100;
 
 const initialState = {
     actualAlgorithm : ALGORITHMS[0],

@@ -4,7 +4,7 @@ import './styles.css';
 // COMPONENTS
 import Node from './Node';
 
-class Map extends Component{
+class Maze extends Component{
 
     render(){
 
@@ -38,4 +38,4 @@ class Map extends Component{
     }
 }
 
-export default Map;
+export default Maze;
